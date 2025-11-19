@@ -1,0 +1,168 @@
+:root{
+  --icpm-blue:#103c7b;
+  --icpm-yellow:#fac605;
+}
+
+/* Laisse de la place sous la navbar fixed-top pour que la bannière ne passe pas dessous */
+body{ padding-top:72px; }
+@media (max-width:991.98px){
+  body{ padding-top:64px; }
+}
+
+/* Navbar claire : liens noirs, hover jaune */
+.navbar-light .navbar-nav .nav-link{
+  color:#000 !important;
+  font-weight:600;
+  transition:color .2s ease;
+}
+.navbar-light .navbar-nav .nav-link:hover,
+.navbar-light .navbar-nav .nav-link:focus{
+  color:var(--icpm-yellow) !important;
+}
+
+/* Garde la navbar au-dessus du hero */
+.navbar{ z-index:1030; }
+
+/* Optionnel : petite bordure + ombre pour bien séparer du hero */
+.navbar.bg-white{
+  border-bottom:1px solid #eaeaea;
+  box-shadow:0 2px 8px rgba(0,0,0,.04);
+}
+
+
+/* Hero */
+#hero {
+  background: url('assets/img/slide1.jpg') no-repeat center center/cover;
+  color: white;
+  height: 90vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+}
+
+#hero h1 {
+  font-size: 2.5rem;
+  margin-bottom: 15px;
+  color: #fac605; /* titre en jaune */
+}
+
+.btn-primary {
+  background: #fac605;
+  color: #103c7b;
+  padding: 12px 20px;
+  border-radius: 5px;
+  font-weight: bold;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-primary:hover {
+  background: #103c7b;
+  color: #fac605;
+}
+
+.btn-secondary {
+  background: #103c7b;
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.btn-secondary:hover {
+  background: #fac605;
+  color: #103c7b;
+}
+
+/* Sections */
+section {
+  padding: 60px 0;
+}
+
+h2 {
+  text-align: center;
+  margin-bottom: 40px;
+  color: #103c7b; /* bleu */
+}
+
+.grid-3, .grid-4 {
+  display: grid;
+  gap: 20px;
+}
+
+.grid-3 {
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+}
+
+.grid-4 {
+  grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+}
+
+/* Cards */
+.card {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+  transition: all 0.3s ease-in-out;
+  border: 2px solid transparent;
+}
+
+.card:hover {
+  transform: translateY(-6px);
+  border-color: #fac605;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.2);
+}
+
+.card h3 {
+  color: #103c7b;
+}
+
+.card p {
+  color: #333;
+}
+
+.price {
+  font-size: 1.5rem;
+  color: #fac605;
+}
+
+
+
+/* Footer */
+footer {
+  background: #103c7b;
+  color: white;
+  text-align: center;
+  padding: 15px;
+}
+
+footer a {
+  color: #fac605;
+  text-decoration: none;
+}
+
+footer a:hover {
+  color: white;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nav-links {
+    flex-direction: column;
+    background: #103c7b;
+    position: absolute;
+    top: 60px;
+    right: 0;
+    width: 200px;
+    display: none;
+  }
+
+  .nav-links a {
+    padding: 10px;
+    border-bottom: 1px solid rgba(255,255,255,0.2);
+  }
+}
